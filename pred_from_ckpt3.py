@@ -151,7 +151,7 @@ def pred(test_images):
         # path = './hed_test_data_resize/' + test_image
         path=test_image
         ipt_img = cv2.imread(path, )
-        output_img = predict_big_map(img_path=path, out_shape=(448, 448), inner_shape=(224, 224), out_channel=1,
+        output_img = predict_big_map(img_path=path, out_shape=(224, 224), inner_shape=(112, 112), out_channel=1,
                                      pred_fun=(lambda ipt: sess.run(sides, feed_dict={hed_class.x: ipt})),
                                      mean=cfg['mean'])
         hed = np.squeeze((output_img * 255).astype(np.uint8))

@@ -8,11 +8,11 @@ def read_file_name(file_dir):
 
 
 def resize(file_name, widthNew, heightNew):
-    img2 = cv2.imread(os.path.join('./trad_test_data', file_name))
+    img2 = cv2.imread(os.path.join('./hed_test_data_resize448', file_name))
     img2 = cv2.resize(img2, (widthNew, heightNew))
-    cv2.imwrite(os.path.join('./trad_test_data_resize', file_name), img2)
+    cv2.imwrite(os.path.join('./hed_test_data_resize224', file_name), img2)
 
 
-files = read_file_name('./trad_test_data')
+files = read_file_name('./hed_test_data_resize448')
 for file in files:
-    resize(file,448,448)
+    resize(file,224,224)

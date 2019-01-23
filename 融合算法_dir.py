@@ -46,7 +46,7 @@ def choose_algor(fileName):
 
 # dir='./hed_test_data_resize'
 # dir='./temp_data'
-dir='./hed_test_data_resize'
+dir='./hed_test_data_resize224'
 fileNames=os.listdir(dir)
 hed_paths=[]
 canny_paths=[]
